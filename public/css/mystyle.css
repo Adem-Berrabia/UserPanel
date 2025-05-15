@@ -61,33 +61,25 @@ button.btn:focus {
 }
 
 @media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
-        display: block;
-    }
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
 
-    td {
-        position: relative;
-        padding-left: 50%;
-    }
+  td {
+    position: relative;
+    padding-left: 50%;
+  }
 
-    td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 10px;
-        top: 6px;
-        font-weight: bold;
-    }
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    font-weight: bold;
+  }
 }
-/* table {
-    display: flex;
-    flex-direction: column;
-}
-
-tr {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-th, td {
-    flex: 1 1 100%;
-} */
