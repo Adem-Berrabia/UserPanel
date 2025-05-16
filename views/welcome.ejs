@@ -30,9 +30,7 @@
     <link href="./css/sidebars.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/mystyle.css" />
     <style>
-      /*
- * Globals
- */
+      /* Globals*/
       /* Custom default button */
       .btn-light,
       .btn-light:hover,
@@ -41,9 +39,7 @@
         text-shadow: none; /* Prevent inheritance from `body` */
       }
 
-      /*
- * Base structure
- */
+      /* Base structure*/
 
       body {
         text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
@@ -53,13 +49,51 @@
       .cover-container {
         max-width: 42em;
       }
+      /* Wave emoji animation */
+      .wave-emoji {
+        display: inline-block;
+        animation: wave 2s infinite;
+        transform-origin: 70% 70%;
+      }
+
+      @keyframes wave {
+        0% {
+          transform: rotate(0deg);
+        }
+        10% {
+          transform: rotate(14deg);
+        }
+        20% {
+          transform: rotate(-8deg);
+        }
+        30% {
+          transform: rotate(14deg);
+        }
+        40% {
+          transform: rotate(-4deg);
+        }
+        50% {
+          transform: rotate(10deg);
+        }
+        60% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
     </style>
   </head>
   <body class="d-flex h-100 text-center text-bg-dark">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <%- include('./auth/header.ejs',{currentPage:"welcome"}) %>
       <main class="px-3">
-        <h1>Welcome to <span class="fw-bold">UserPanel 👋</span></h1>
+        <h1>
+          Welcome to
+          <span class="fw-bold"
+            >UserPanel <span class="wave-emoji">👋</span></span
+          >
+        </h1>
         <p class="lead mt-4">
           To help you with storing and organizing the data created and collected
           by an organization. The data management process aim to make sure the
