@@ -143,55 +143,44 @@
             <button type="submit" class="btn btn-primary">
               Update Changes
             </button>
+
+
             <button
               type="button"
               class="btn btn-danger"
               data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
+              data-bs-target="#deleteCustomerModal"
             >
               Delete Customer
             </button>
+
+            
           </div>
         </form>
       </section>
 
       <!-- Modal -->
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Delete Customer
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">Are you sure to delete the Customer !!</div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <form action="/edit/<%= obj._id %>?_method=DELETE" method="post">
-                <button type="submit" class="btn btn-danger">Delete</button>
-              </form>
-            </div>
-          </div>
-        </div>
+<div class="modal fade" id="deleteCustomerModal" tabindex="-1" aria-labelledby="deleteCustomerModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="deleteCustomerModalLabel">Delete Customer</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <div class="modal-body">
+        Are you sure to delete the Customer !!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <form action="/edit/<%= obj._id %>?_method=DELETE" method="post">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
     </main>
     <script src="../js/bootstrap.bundle.min.js"></script>
 
