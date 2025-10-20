@@ -4,6 +4,14 @@ A secure, web-based user panel for efficient user management with authentication
 
 ---
 
+## 🌐 Try the Deployed Project
+
+You can try the live version of this project without installing anything locally.
+
+**Deployed URL:**https://userpanel-mo0o.onrender.com/
+
+---
+
 ## 🛠️ Installation
 
 1. Clone the repository:
