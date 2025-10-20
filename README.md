@@ -21,10 +21,22 @@ npm install
 
 3. Set up environment variables:
 
-```bash
-cp .env.example .env
-# Edit .env with your configuration (PORT, DB connection, session secret, etc.)
+### Required `.env` variables
+
 ```
+# MongoDB connection string
+MONGODB_URL=your_mongodb_connection_string
+
+# JWT secret key for authentication
+JWT_SECRET_KEY=your_secret_key_here
+
+# Cloudinary configuration (for image uploads)
+CLOUD_NAME=your_cloud_name_here
+API_KEY=your_api_key_here
+API_SECRET=your_api_secret_here
+```
+
+> ⚠️ Keep your `.env` file secret and **do not** commit it to GitHub.
 
 4. Run the application:
 
